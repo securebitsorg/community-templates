@@ -4,6 +4,10 @@ All templates are organized by subfolders for the respective distro families or 
 
 If you have any questions or problems, please visit my forum at https://secure-bits.org/community.
 
+You can also find more information on the Ansible documentation page.
+
+https://docs.ansible.com/ansible-core/2.18/collections/ansible/builtin/index.html
+
 ## Latest Blog Posts
 
 Check out my blog for insights and updates: [Secure Bits Blog](https://secure-bits.org)
