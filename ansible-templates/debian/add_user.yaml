@@ -3,7 +3,7 @@
     name: "{{ username }}"
     password: "{{ user_password }}"
     comment: for example your name
-    uid: 1005
+    uid: 1005 
     groups: admin,sudo
     create_home: yes
     generate_ssh_key: yes
