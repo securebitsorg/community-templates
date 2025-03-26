@@ -1,0 +1,23 @@
+---
+- hosts: all
+  become_user: root # change with your sudo account
+  become: yes
+
+  tasks:
+
+    - name: Update
+      ansible.builtin.apt:
+        update_cache: yes
+    
+    - name: Upgrade OS
+      ansible.builtin.apt:
+        upgrade: dist
+
+    - name: Install net-tools
+      ansible.builtin.apt:
+        name: 
+          - net-tools # <-- Insert the desired package names here
+          - curl
+          - ufw
+          - gnupg2
+        state: present

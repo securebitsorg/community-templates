@@ -2,7 +2,7 @@
 
 All templates are organized by subfolders for the respective distro families or tasks.
 
-If you have any questions or problems, please visit my forum at https://secure-bits.org/community.
+If you have any questions or problems, please visit my forum at https://secure-bits.org/community (german / english).
 
 You can also find more information on the Ansible documentation page.
 
