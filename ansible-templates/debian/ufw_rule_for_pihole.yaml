@@ -1,0 +1,39 @@
+---
+- hosts: all
+  become_user: root
+  become: yes
+# In this example, we allow all ports for use the pihole 
+
+
+  tasks:
+    - name: allow ssh # example port 22
+      community.general.ufw:
+        rule: allow
+        port: 22
+        proto: tcp
+
+    - name: allow https
+      community.general.ufw:
+        rule: allow
+        port: https
+        proto: tcp
+
+    - name: allow https udp
+      community.general.ufw:
+        rule: allow
+        port: 443
+        proto: udp
+
+    - name: allow DNS
+      community.general.ufw:
+        rule: allow
+        port: 53
+        proto: udp
+
+    - name: allow DNS crypt
+      community.general.ufw:
+        rule: allow
+        port: 853
+        proto: udp
+        
+        
