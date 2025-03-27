@@ -1,12 +1,8 @@
 # Information! 👋
 
-All templates are organized by subfolders for the respective distro families or tasks.
+All opentofu templates in this folder usually work with all Debian-based distributions.
 
-If you have any questions or problems, please visit my forum at https://secure-bits.org/community (german / english).
-
-You can also find more information on the Ansible documentation page.
-
-https://docs.ansible.com/ansible-core/2.18/collections/ansible/builtin/index.html
+If you have any questions or problems, please visit my forum at https://secure-bits.org/community.
 
 ## Latest Blog Posts
 
