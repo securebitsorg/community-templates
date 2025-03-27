@@ -1,4 +1,4 @@
-Security Policy
+# Security Policy
 
 I take the security of my projects seriously. If you discover any security vulnerabilities or have concerns regarding the security of this repository, please reach out to me immediately. I appreciate your efforts in responsibly disclosing the issue and will make every effort to address it promptly.
 Reporting a Vulnerability

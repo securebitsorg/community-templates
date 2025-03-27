@@ -1,4 +1,4 @@
-## Information! 👋
+# Information! 👋
 
 All templates are organized by subfolders for the respective distro families or tasks.
 

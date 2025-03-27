@@ -1,2 +1,2 @@
-## Information! 👋
+# Information! 👋
 
