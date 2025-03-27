@@ -2,27 +2,25 @@
 - hosts: all
   become_user: root
   become: yes
-# In this example, we allow port 443 (https) and port 22 (ssh). 
-# For SSH we will set a limit for false logins and limit access only from 
-# the defined subnet (example 192.168.178.0/24)
+  # In this example, we allow port 443 (https) and port 22 (ssh). 
+  # For SSH we will set a limit for false logins and limit access only from 
+  # the defined subnet (example 192.168.178.0/24)
 
   tasks:
-    - name: allow ssh # example port 22
-      community.general.ufw:
-        rule: allow
-        port: 22
-        proto: tcp
-        src: 192.168.178.0/24 # example
+  - name: allow ssh # example port 22
+    community.general.ufw:
+      rule: allow
+      port: 22
+      proto: tcp
+      src: 192.168.178.0/24 # example
 
-    - name: ssh limit
-      community.general.ufw:
-        rule: limit # limit limit of five incorrect registrations
-        port: ssh
-        proto: tcp
+  - name: ssh limit
+    community.general.ufw:
+      rule: limit # limit limit of five incorrect registrations
+      port: ssh
+      proto: tcp
 
-    - name: allow https
-      community.general.ufw: 
-        rule: allow
-        port: https
-
-
+  - name: allow https
+    community.general.ufw:
+      rule: allow
+      port: https
