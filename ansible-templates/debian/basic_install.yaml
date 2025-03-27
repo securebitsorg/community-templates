@@ -20,4 +20,6 @@
           - curl
           - ufw
           - gnupg2
+          - apt-transport-https
+          - ca-certificates
         state: present
