@@ -7,20 +7,20 @@
   # the defined subnet (example 192.168.178.0/24)
 
   tasks:
-  - name: allow ssh # example port 22
-    community.general.ufw:
-      rule: allow
-      port: 22
-      proto: tcp
-      src: 192.168.178.0/24 # example
+    - name: allow ssh # example port 22
+      community.general.ufw:
+        rule: allow
+        port: 22
+        proto: tcp
+        src: 192.168.178.0/24 # example
 
-  - name: ssh limit
-    community.general.ufw:
-      rule: limit # limit limit of five incorrect registrations
-      port: ssh
-      proto: tcp
+    - name: ssh limit
+      community.general.ufw:
+        rule: limit # limit limit of five incorrect registrations
+        port: ssh
+        proto: tcp
 
-  - name: allow https
-    community.general.ufw:
-      rule: allow
-      port: https
+    - name: allow https
+      community.general.ufw:
+        rule: allow
+        port: https
