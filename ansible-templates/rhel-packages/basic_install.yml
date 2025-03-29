@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+
+  tasks:
+
+    - name: update
+      dnf:
+        update_cache: yes
+
+    - name: Upgrade
+      dnf:
+        upgrade: dist
+    
+    - name: Install basic packages
+      dnf:
+        name: Example packages
+          - ntp
+          - curl
+          - nano

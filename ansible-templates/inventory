@@ -1,0 +1,8 @@
+# For example
+[web_server]
+172.16.16.5
+172.16.16.6
+
+[database_server]
+172.16.16.10
+

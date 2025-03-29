@@ -1,0 +1,30 @@
+---
+- hosts: all
+  become0: yes
+  become_user: root # change with your sudo-user
+
+
+  tasks:
+    - name: Update and upgrade dnf packages
+      when: ansible_pkg_mgr == 'dnf'
+      ansible.builtin.dnf:
+        update_cache: true
+
+    - name: Perform a dist-upgrade.
+      when: ansible_pkg_mgr == 'dnf'
+      ansible.builtin.dnf:
+        upgrade: dist
+
+    - name: Check if a reboot is required.
+      ansible.builtin.stat:
+        path: /var/run/reboot-required
+        get_checksum: no
+      register: reboot_required_file
+
+    - name: Reboot the server (if required).
+      ansible.builtin.reboot:
+      when: reboot_required_file.stat.exists == true
+
+    - name: Remove dependencies that are no longer required.
+      ansible.builtin.dnf:
+        autoremove: yes
