@@ -1,7 +1,7 @@
 ---
 - hosts: all
-  become_user: root
-  become: yes # change with your sudo-user
+  become0: yes
+  become_user: root # change with your sudo-user
 
 
   tasks:

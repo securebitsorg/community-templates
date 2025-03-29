@@ -35,5 +35,10 @@
         rule: allow
         port: 853
         proto: udp
+
+    - name: allow ntp
+      community.general.ufw:
+        rule: allow
+        port: ntp
         
         

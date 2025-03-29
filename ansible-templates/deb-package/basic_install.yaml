@@ -22,4 +22,5 @@
           - gnupg2
           - apt-transport-https
           - ca-certificates
+          - nano
         state: present

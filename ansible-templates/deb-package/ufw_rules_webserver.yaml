@@ -24,3 +24,8 @@
       community.general.ufw:
         rule: allow
         port: https
+    
+    - name: allow ntp
+      community.general.ufw: 
+        rule: allow
+        port: ntp
