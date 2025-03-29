@@ -1,6 +1,6 @@
 # Information! 👋
 
-All opentofu templates in this folder usually work with all Debian-based distributions.
+All ansible templates in this folder usually work with all RHEL-based distributions (centOS, Rocky Linux, etc.).
 
 If you have any questions or problems, please visit my forum at https://secure-bits.org/community.
 
