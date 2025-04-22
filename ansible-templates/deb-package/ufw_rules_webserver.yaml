@@ -16,7 +16,7 @@
 
     - name: ssh limit
       community.general.ufw:
-        rule: limit # limit limit of five incorrect registrations
+        rule: limit # limit of five incorrect registrations
         port: ssh
         proto: tcp
 
