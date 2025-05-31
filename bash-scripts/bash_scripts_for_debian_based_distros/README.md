@@ -1,6 +1,6 @@
 # Information
 
-> [!INFO]
+> [!INFORMATION]
 > If you would like to always run the update script automatically via cronjob, open the script file. Here you will find instructions on how to create a cronjob.
 
 
