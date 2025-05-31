@@ -10,21 +10,6 @@ This script automates the installation of a set of custom base packages on your 
 - Bash shell
 - Sudo privileges
 
-## Usage
-
-### Open the terminal in your distro
-
-Go to the download directory where you downloaded the install_custom_base_packages.sh file and the .env file.
-Enter the command below to give the bash script the necessary permissions to execute.
-
-```bash
-chmod +x install_custom_base_packages.sh
-
-# With the following command, you execute the bash script
-
-./install_custom_base_packages.sh
-```
-
 ## What It Does
 
 - Updates package lists
@@ -44,6 +29,20 @@ PACKAGES=(
     vim
     # add or remove packages as needed
 )
+```
+## Usage
+
+### Open the terminal in your distro
+
+Go to the download directory where you downloaded the install_custom_base_packages.sh file and the .env file.
+Enter the command below to give the bash script the necessary permissions to execute.
+
+```bash
+chmod +x install_custom_base_packages.sh
+
+# With the following command, you execute the bash script
+
+./install_custom_base_packages.sh
 ```
 
 ## Notes
