@@ -2,6 +2,33 @@
 
 # auto_update_distro.sh - Automatically update the system on debian-based systems
 
+# Instructions for automatically running the script via a Cronjob:
+#
+# 1. Download the script and make it executable:
+#   - Download the script `auto_update_distro.sh`.
+#   - Make the script executable with the command: `chmod +x auto_update_distro.sh`
+#
+# 2. Determine the script path:
+#   - Find out the absolute path to the script. This can be done with the command `pwd` in the script's directory or by manually entering the full path.
+#   - Example: `/home/marci/Code/community-templates/bash-scripts/bash_scripts_for_rhel_cenos_fedora/auto_update_distro.sh`
+#
+# 3. Create or edit the Cronjob:
+#   - Open the Crontab file with the command: `crontab -e`
+#   - Choose an editor if asked (e.g., nano or vim).
+#
+# 4. Add Cronjob entry:
+#   - Add a line that executes the script at regular intervals. The syntax for Cronjobs is:
+#     `minute hour day_of_month month day_of_week command`
+#   - For example, to run the script daily at 3:00 AM, add the following line:
+#     `0 3 * * * /home/marci/Code/community-templates/bash-scripts/bash_scripts_for_rhel_cenos_fedora/auto_update_distro.sh`
+#   - Save the Crontab file and close the editor.
+#
+# 5. Notes:
+#   - Make sure that the user under which the Cronjob is executed has the necessary permissions to run the script (especially `sudo` rights).
+#   - Check the Cron logs (usually under `/var/log/syslog` or `/var/log/cron`) to ensure that the script is executed successfully and to identify any errors.
+#   - Adjust the Cronjob schedule to your needs. Further information on Cronjob syntax can be found in the Crontab documentation (`man crontab`).
+#   - It is advisable to test the execution of the script manually before automating it in a Cronjob.
+
 # Check if the OS is Debian-based
 if [ ! -f /etc/debian_version ]; then
     echo "This script is intended for Debian-based systems only."
