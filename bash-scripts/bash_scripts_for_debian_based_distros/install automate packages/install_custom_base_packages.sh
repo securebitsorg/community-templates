@@ -50,9 +50,8 @@ echo "Install netbird... "
 sudo apt update
 sudo apt install netbird -y
 
-
-echo "Run netbird and setup setupkey..."
-netbird up --setup-key ${setupkey}
+echo "Set Netbird-Domain: ${netbird_domain} and register"
+netbird up --management-url ${netbird_domain} --setup-key ${setupkey}
 
 echo "Enable netbird service..."
 sudo systemctl enable netbird
