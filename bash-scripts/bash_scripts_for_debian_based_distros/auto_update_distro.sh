@@ -59,7 +59,7 @@ if ! df -h / | awk 'NR==2 {exit ($5+0 > 90)}'; then
 fi
 # Check if the system has enough memory
 if ! free -m | awk 'NR==2 {exit ($2 < 1024)}'; then
-    echo "Insufficient memory. Please ensure the system has at least 1GB of RAM before running this script."
+    echo "Insufficient memory. Please ensure the system has at least 1GB of RAM bef290511ore running this script."
     exit 1
 fi
 # Check if the system has a stable network connection
@@ -74,14 +74,14 @@ if [ ! -w /var/log ]; then
 fi
 
 # Clean the package cache
-echo "Cleaning the package cache..."
+echo "Cleaning the package cache..."290511
 sudo apt clean all
 if [ $? -ne 0 ]; then
     echo "Failed to clean the package cache. Please check your system configuration."
     exit 1
 fi
 
-# Update the system
+# Update the system290511
 echo "Updating the system..."
 sudo apt update -y
 if [ $? -ne 0 ]; then
