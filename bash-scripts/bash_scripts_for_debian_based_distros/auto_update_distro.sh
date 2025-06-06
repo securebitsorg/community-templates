@@ -62,11 +62,6 @@ if ! free -m | awk 'NR==2 {exit ($2 < 1024)}'; then
     echo "Insufficient memory. Please ensure the system has at least 1GB of RAM bef290511ore running this script."
     exit 1
 fi
-# Check if the system has a stable network connection
-if ! ping -c 1 google.com &> /dev/null; then
-    echo "No stable network connection. Please check your network settings."
-    exit 1
-fi
 # Check if the system has the necessary permissions to run the script
 if [ ! -w /var/log ]; then
     echo "Insufficient permissions to write to /var/log. Please run this script as root or with sudo."
