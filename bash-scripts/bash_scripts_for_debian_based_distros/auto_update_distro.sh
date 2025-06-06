@@ -10,7 +10,7 @@
 #
 # 2. Determine the script path:
 #   - Find out the absolute path to the script. This can be done with the command `pwd` in the script's directory or by manually entering the full path.
-#   - Example: `/home/marci/Code/community-templates/bash-scripts/bash_scripts_for_rhel_cenos_fedora/auto_update_distro.sh`
+#   - Example: `/your path to file/auto_update_distro.sh`
 #
 # 3. Create or edit the Cronjob:
 #   - Open the Crontab file with the command: `crontab -e`
@@ -20,7 +20,7 @@
 #   - Add a line that executes the script at regular intervals. The syntax for Cronjobs is:
 #     `minute hour day_of_month month day_of_week command`
 #   - For example, to run the script daily at 3:00 AM, add the following line:
-#     `0 3 * * * /home/marci/Code/community-templates/bash-scripts/bash_scripts_for_rhel_cenos_fedora/auto_update_distro.sh`
+#     `0 3 * * * //your path to file/auto_update_distro.sh`
 #   - Save the Crontab file and close the editor.
 #
 # 5. Notes:
