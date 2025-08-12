@@ -47,8 +47,8 @@ if sudo apt check-update | grep -q 'No packages marked for update'; then
 fi
 
 # Check if the system is running a supported version
-if ! grep -qE 'Debian GNU/Linux 10|Debian GNU/Linux 11|Debian GNU/Linux 12|Ubuntu 20.04 LTS|Ubuntu 22.04 LTS|Ubuntu 24.04 LTS' /etc/os-release; then
-    echo "This script is intended for Debian 10, Debian 11, Debian 12, Ubuntu 20.04 LTS, Ubuntu 22.04 LTS or Ubuntu 24.04 LTS systems only."
+if ! grep -qE 'Debian GNU/Linux 10|Debian GNU/Linux 11|Debian GNU/Linux 12|Debian GNU/Linux 13|Ubuntu 20.04 LTS|Ubuntu 22.04 LTS|Ubuntu 24.04 LTS' /etc/os-release; then
+    echo "This script is intended for Debian 10, Debian 11, Debian 12, Debian 13, Ubuntu 20.04 LTS, Ubuntu 22.04 LTS or Ubuntu 24.04 LTS systems only."
     exit 1
 fi
 
