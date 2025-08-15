@@ -46,18 +46,12 @@ if sudo apt check-update | grep -q 'No packages marked for update'; then
     exit 0
 fi
 
-# Check if the system is running a supported version
-# if ! grep -qE 'Debian GNU/Linux 10|Debian GNU/Linux 11|Debian GNU/Linux 12|Debian GNU/Linux 13|Ubuntu 20.04 LTS|Ubuntu 22.04 LTS|Ubuntu 24.04 LTS' /etc/os-release; then
-#    echo "This script is intended for Debian 10, Debian 11, Debian 12, Debian 13, Ubuntu 20.04 LTS, Ubuntu 22.04 LTS or Ubuntu 24.04 LTS systems only."
-#    exit 1
-#fi
-# Another os-check
-if [ -f /etc/os-release '|' grep -qE 'Debian GNU/Linux 10|Debian GNU/Linux 11|Debian GNU/Linux 12|Debian GNU/Linux 13|Ubuntu 20.04 LTS|Ubuntu 22.04 LTS|Ubuntu 24.04 LTS' ]; then
-    echo "The system is running a supported version."
-else
-    echo "The system is not running a supported version."
+#Check if the system is running a supported version
+ if ! grep -qE 'Debian GNU/Linux 10|Debian GNU/Linux 11|Debian GNU/Linux 12|Debian GNU/Linux 13|Ubuntu 20.04 LTS|Ubuntu 22.04 LTS|Ubuntu 24.04 LTS' /etc/os-release; then
+    echo "This script is intended for Debian 10, Debian 11, Debian 12, Debian 13, Ubuntu 20.04 LTS, Ubuntu 22.04 LTS or Ubuntu 24.04 LTS systems only."
     exit 1
 fi
+
 # Check if the system has enough disk space
 if ! df -h / | awk 'NR==2 {exit ($5+0 > 90)}'; then
     echo "Insufficient disk space. Please free up some space before running this script."
