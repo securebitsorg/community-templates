@@ -10,6 +10,13 @@
 # sudo chmod +x simple_update_debian_script.sh
 # sudo ./simple_update_debian_script.sh
 
+# Automatisieren:
+# Sie können dieses Script in regelmäßigen Abständen mit einem Cron-Job ausführen, um Ihr System automatisch auf dem neuesten Stand zu halten. Zum Beispiel könnten Sie es einmal pro Woche ausführen lassen.
+# Öffnen Sie die Crontab mit dem Befehl: sudo crontab -e
+# Fügen Sie die folgende Zeile hinzu, um das Script jeden Sonntag um 3 Uhr morgens auszuführen:
+
+# 0 3 * * 0 /pfad/zu/simple_update_debian_script.sh 
+
 # Info:
 # This script is intended for Debian-based systems.
 # It updates the system and removes unused packages.
@@ -20,13 +27,19 @@
 # sudo chmod +x simple_update_debian_script.sh
 # sudo ./simple_update_debian_script.sh
 
+# Automating:
+# You can set up a cron job to run this script at regular intervals to keep your system up to date. For example, you could run it once a week.
+# Open the crontab with the command: sudo crontab -e
+# Add the following line to run the script every Sunday at 3 AM: 
+# 0 3 * * 0 /path/to/simple_update_debian_script.sh
 
 
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] Script beendet"
 # Automatisches Update-Script für Debian-basierte Systeme / Automatic update script for Debian-based systems
 
 echo "================================================================="
-echo "     Automatisches System-Update / Automatic system update"
-echo "        (Debian/Ubuntu/Mint)"
+echo "     Automatisches System-Update / Automatic system update       "
+echo "        (Debian/Ubuntu/Mint)                                     "
 echo "================================================================="
 
 # Prüfen, ob root-Rechte vorhanden sind / Check if root privileges are present
@@ -37,7 +50,7 @@ fi
 
 # Prüfen, ob apt verfügbar ist / Check if apt is available
 if ! command -v apt >/dev/null 2>&1; then
-  echo "Kein 'apt'-Paketmanager gefunden. Dieses Script funktioniert nur auf Debian-basierten Systemen / No 'apt' package manager found. This script only works on Debian-based systems."
+  echo "Kein 'apt'-Paketmanager gefunden. Dieses Script echo "[$(date '+%Y-%m-%d %H:%M:%S')] Script beendet"funktioniert nur auf Debian-basierten Systemen / No 'apt' package manager found. This script only works on Debian-based systems."
   exit 2
 fi
 
@@ -49,7 +62,7 @@ apt update -y
 echo "Installiere verfügbare Updates / Install available updates"
 apt upgrade -y
 
-# Optionale Komplett-Aktualisierung (inklusiver Entfernungen/Neuinstallationen) / Optional full upgrade (including removals/reinstallations)
+# Optionale Komplett-Aktualisierung (inklusiver Entfernunecho "[$(date '+%Y-%m-%d %H:%M:%S')] Script beendet"gen/Neuinstallationen) / Optional full upgrade (including removals/reinstallations)
 echo "Führe vollständige Aktualisierung durch / Run full upgrade"
 apt full-upgrade -y
 
@@ -63,7 +76,8 @@ echo "Bereinige zwischengespeicherte Paketdaten / Clean up cached package data"
 apt clean
 
 echo "================================================================="
-echo "      System-Update abgeschlossen / System update completed"
+echo "      System-Update abgeschlossen / System update completed      "
+echo "              [$(date '+%Y-%m-%d %H:%M:%S')] Script beendet      "
 echo "================================================================="
 
 # Überprüfen ob ein Neustart des Systems erforderlich ist / Check if a system restart is required

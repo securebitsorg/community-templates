@@ -23,7 +23,12 @@
 
 # sudo ./simple_update_RHEL_script.sh
 
+# Automatisieren:
+# Sie können dieses Script in regelmäßigen Abständen mit einem Cron-Job ausführen, um Ihr System automatisch auf dem neuesten Stand zu halten. Zum Beispiel könnten Sie es einmal pro Woche ausführen lassen.
+# Öffnen Sie die Crontab mit dem Befehl: sudo crontab -e
+# Fügen Sie die folgende Zeile hinzu, um das Script jeden Sonntag um 3 Uhr morgens auszuführen:
 
+# 0 3 * * 0 /pfad/zu/simple_update_rhel_script.sh 
 
 # Info:
 
@@ -43,7 +48,12 @@
 
 # sudo ./simple_update_RHEL_script.sh
 
+# Automating:
+# You can set up a cron job to run this script at regular intervals to keep your system up to date. For example, you could run it once a week.
+# Open the crontab with the command: sudo crontab -e
+# Add the following line to run the script every Sunday at 3 AM: 
 
+# 0 3 * * 0 /path/to/simple_update_rhel_script.sh
 
 
 
@@ -55,9 +65,9 @@
 
 echo "================================================================="
 
-echo "     Automatisches System-Update / Automatic system update"
+echo "     Automatisches System-Update / Automatic system update       "
 
-echo "        (RHEL/Fedora/CentOS)"
+echo "        (RHEL/Fedora/CentOS)                                     "
 
 echo "================================================================="
 
@@ -113,8 +123,8 @@ dnf clean all
 
 echo "================================================================="
 
-echo "      System-Update abgeschlossen / System update completed"
-
+echo "      System-Update abgeschlossen / System update completed      "
+echo "              [$(date '+%Y-%m-%d %H:%M:%S')] Script beendet      "
 echo "================================================================="
 
 
